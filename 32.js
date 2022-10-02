@@ -1,16 +1,16 @@
-const current_users = ["John", "Admin", "Jack", "Ana", "Natalie"];
-const new_users = ["Admin", "John", "Calvin", "Natalie", "Emma"];
+let current_users = ['Hendry', 'Ronnie', 'William', 'Charlie', 'Tom'];
+let new_users = ['Hendry', 'Phillip', 'Sara', 'David', 'CharliE'];
 
-const get = prompt("Enter name to check");
-const result = current_users.includes(get);
-
-for (let i = 0; i < new_users.length; i++) {
-  if (result == new_users[i]) {
-    alert(true);
-    break;
-  } else {
-    alert(false);
-    break;
-  }
+const lowerCasedArray = current_users.map(element => {
+  return element.toLowerCase();
+});
+// Loop through the new new_users array to check
+// If the elements are present in the current_users array or not
+for( var i = 0; i < new_users.length; i++) {
+    let lowerCase = new_users[i].toLowerCase();
+    if(lowerCasedArray.includes(lowerCase) == true) {
+        console.log(`username ${new_users[i]} is not available\n`);
+    } else {
+        console.log(`username ${new_users[i]} is available\n`);
+    }         
 }
-
